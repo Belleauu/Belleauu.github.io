@@ -1,0 +1,37 @@
+#first_div {
+    /* no-repeat center center fixed */
+    background: url(background_tools.jpeg);
+    height: 20vh;
+    width: 100%;
+    background-size: contain;
+    background-position: top;
+    position: relative;
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 83%, 88% 91%, 75% 100%, 31% 90%, 0% 84%); */
+
+}
+
+hr {
+    height:3px;
+    border-width:0;
+    color:gray;
+    background-color:gray
+}
+
+.centered_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#header_title {
+    font-family:'Calibri';
+    font-weight: bolder;
+    font-size: 10vh;
+}
+
+.title_services {
+    font-family:'Calibri';
+    font-weight: bolder;
+    font-size:xx-large;
+}
