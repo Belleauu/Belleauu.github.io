@@ -1,0 +1,44 @@
+.navbar-light .navbar-nav .nav-link {
+    color: red;
+}
+
+/* body {
+    background-image: url(home_screen.jpeg);
+    background: size 100;
+} */
+
+body { 
+    background: url(home_screen.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.info {
+    margin-top: 10ex;
+    /* background-color: whitesmoke; */
+    padding: 2% 5%;
+    font-size:xx-large;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+#main_title {
+    font-family:'Calibri';
+    font-weight: bolder;
+    font-size: 8vh;
+} 
+
+#subtitle {
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: 4vh;
+    background-color: white;
+}
+  
