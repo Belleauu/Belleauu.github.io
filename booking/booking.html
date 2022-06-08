@@ -52,11 +52,12 @@
   <!--NAV BAR-->
 </header>
 
+
 <body class="d-flex flex-column min-vh-100">
   <!-- APPOINTMENT FORM -->
-  <div class="container col-8">
+  <div class="container col-8 mb-5">
     <h2 id="title" class="text-uppercase text-center">PLEASE FILL IN YOUR INFORMATION</h2>
-    <form>
+    <form id="appointment_form">
       <div class="form-group">
         <table class="table table-bordered table-dark">
           <thead>
@@ -91,40 +92,40 @@
           <tbody>
             <tr>
               <td class="col-md-2">
-                <input type="checkbox" class="btn-check mr-3" id="btn-check" autocomplete="off">
-                <label class="btn btn-warning mr-3" for="btn-check">
+                <input type="checkbox" class="btn-check mr-3" id="check-dentures" autocomplete="off">
+                <label class="btn btn-warning mr-3" for="check-dentures">
                   DENTURES
                 </label>
               </td>
               <td class="col-md-2">
-                <input type="checkbox" class="btn-check mr-3" id="btn-check2" autocomplete="off">
-                <label class="btn btn-warning mr-3" for="btn-check2">
+                <input type="checkbox" class="btn-check mr-3" id="check-hygiene" autocomplete="off">
+                <label class="btn btn-warning mr-3" for="check-hygiene">
                   HYGIENE & PREVENTION
                 </label>
               </td>
               <td class="col-md-2">
-                <input type="checkbox" class="btn-check mr-3" id="btn-check3" autocomplete="off">
-                <label class="btn btn-warning mr-5" for="btn-check3">
+                <input type="checkbox" class="btn-check mr-3" id="check-invisalign" autocomplete="off">
+                <label class="btn btn-warning mr-5" for="check-invisalign">
                   INVISALIGN
                 </label>
               </td>
             </tr>
             <tr>
               <td class="col-md-2">
-                <input type="checkbox" class="btn-check mr-3" id="btn-check4" autocomplete="off">
-                <label class="btn btn-warning mr-3" for="btn-check4">
+                <input type="checkbox" class="btn-check mr-3" id="check-root" autocomplete="off">
+                <label class="btn btn-warning mr-3" for="check-root">
                   ROOT CANAL
                 </label>
               </td>
               <td class="col-md-2">
-                <input type="checkbox" class="btn-check mr-3" id="btn-check5" autocomplete="off">
-                <label class="btn btn-warning mr-3" for="btn-check5">
+                <input type="checkbox" class="btn-check mr-3" id="check-whitening" autocomplete="off">
+                <label class="btn btn-warning mr-3" for="check-whitening">
                   TEETH WHITENING
                 </label>
               </td>
               <td class="col-md-2">
-                <input type="checkbox" class="btn-check mr-3" id="btn-check6" autocomplete="off">
-                <label class="btn btn-warning mr-3 " for="btn-check6">
+                <input type="checkbox" class="btn-check mr-3" id="check-extraction" autocomplete="off">
+                <label class="btn btn-warning mr-3 " for="check-extraction">
                   TOOTH EXTRACTION
                 </label>
               </td>
@@ -133,7 +134,7 @@
         </table>
       </div>
       <div class="text-center">
-        <button class="btn btn-primary col-md-6">BOOK AN APPOINTMENT</button>
+        <button onclick="storeInfo()" class="btn btn-primary col-md-6">BOOK AN APPOINTMENT</button>
       </div>
   </div>
 
@@ -216,6 +217,53 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript">
+    function storeInfo() {
+      var allInfo = true;
+      // Client Info
+      var inputName = document.getElementById("inputName");
+      if (inputName.localCompare("") == 0) { allInfo = false; }
+      var inputLastName = document.getElementById("inputLastName");
+      if (inputLastName.localCompare("") == 0) { allInfo = false; }
+      var inputEmail = document.getElementById("inputEmail");
+      if (inputEmail.localCompare("") == 0) { allInfo = false; }
+      var inputTelephone = document.getElementById("inputTelephone");
+      if (inputTelephone.localCompare("") == 0) { allInfo = false; }
+
+      // Services
+      var serviceSelect = false;
+      var inputCheckDentures = document.getElementById("check-dentures");
+      if (inputCheckDentures.localCompare("") == 0) { allInfo = true; }
+      var inputCheckHygiene = document.getElementById("check-hygiene");
+      if (inputCheckHygiene.localCompare("") == 0) { allInfo = true; }
+      var inputCheckInvisalign = document.getElementById("check-invisalign");
+      if (inputCheckInvisalign.localCompare("") == 0) { allInfo = true; }
+      var inputCheckRoot = document.getElementById("check-root");
+      if (inputCheckRoot.localCompare("") == 0) { allInfo = true; }
+      var inputCheckWhitening = document.getElementById("check-whitening");
+      if (inputCheckWhitening.localCompare("") == 0) { allInfo = true; }
+      var inputCheckExtraction = document.getElementById("check-extraction");
+      if (inputCheckExtraction.localCompare("") == 0) { allInfo = true; }
+
+      if (serviceSelect && allInfo) {
+        // Saving client Info
+        localStorage.setItem('inputName', inputName.value);
+        localStorage.setItem('inputLastName', inputLastName.value);
+        localStorage.setItem('inputEmail', inputEmail.value);
+        localStorage.setItem('inputTelephone', inputTelephone.value);
+
+        // Service Info
+        localStorage.setItem('inputCheckDentures', inputCheckDentures.value);
+        localStorage.setItem('inputCheckHygiene', inputCheckHygiene.value);
+        localStorage.setItem('inputCheckInvisalign', inputCheckInvisalign.value);
+        localStorage.setItem('inputCheckRoot', inputCheckRoot.value);
+        localStorage.setItem('inputCheckWhitening', inputCheckWhitening.value);
+        localStorage.setItem('inputCheckExtraction', inputCheckExtraction.value);
+      }
+    }
+  </script>
   <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script> -->
 </body>
 
