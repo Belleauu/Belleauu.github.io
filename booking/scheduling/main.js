@@ -9,3 +9,5 @@ var storedCheckInvisalign = localStorage.getItem("inputCheckInvisalign");
 var storedCheckRoot = localStorage.getItem("inputCheckRoot");
 var storedCheckWhitening = localStorage.getItem("inputCheckWhitening");
 var storedCheckExtraction = localStorage.getItem("inputCheckExtraction");
+
+document.getElementById()

@@ -134,7 +134,7 @@
         </table>
       </div>
       <div class="text-center bg-dark pt-4 pb-4"> 
-        <button onclick="storeInfo()" class="btn btn-warning col-md-6">SCHEDULE YOUR APPOINTMENT</button>
+        <button type="button" onclick="window.location.href='./scheduling/scheduling.html'" class="btn btn-warning col-md-6">SCHEDULE YOUR APPOINTMENT</button>
       </div>
   </div>
 
@@ -144,7 +144,7 @@
   <!-- APPOINTMENT FORM -->
 
   <!-- FOOTER -->
-  <footer class=" footer pt-4 bg-dark text-white mt-auto">
+  <footer class="footer pt-4 bg-dark text-white mt-auto">
     <!-- Container -->
     <div class="container text-justify text-md-left">
       <!--Grid row-->
@@ -217,53 +217,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-
-
-  <script type="text/javascript">
-    function storeInfo() {
-      var allInfo = true;
-      // Client Info
-      var inputName = document.getElementById("inputName");
-      if (inputName.localCompare("") == 0) { allInfo = false; }
-      var inputLastName = document.getElementById("inputLastName");
-      if (inputLastName.localCompare("") == 0) { allInfo = false; }
-      var inputEmail = document.getElementById("inputEmail");
-      if (inputEmail.localCompare("") == 0) { allInfo = false; }
-      var inputTelephone = document.getElementById("inputTelephone");
-      if (inputTelephone.localCompare("") == 0) { allInfo = false; }
-
-      // Services
-      var serviceSelect = false;
-      var inputCheckDentures = document.getElementById("check-dentures");
-      if (inputCheckDentures.localCompare("") == 0) { allInfo = true; }
-      var inputCheckHygiene = document.getElementById("check-hygiene");
-      if (inputCheckHygiene.localCompare("") == 0) { allInfo = true; }
-      var inputCheckInvisalign = document.getElementById("check-invisalign");
-      if (inputCheckInvisalign.localCompare("") == 0) { allInfo = true; }
-      var inputCheckRoot = document.getElementById("check-root");
-      if (inputCheckRoot.localCompare("") == 0) { allInfo = true; }
-      var inputCheckWhitening = document.getElementById("check-whitening");
-      if (inputCheckWhitening.localCompare("") == 0) { allInfo = true; }
-      var inputCheckExtraction = document.getElementById("check-extraction");
-      if (inputCheckExtraction.localCompare("") == 0) { allInfo = true; }
-
-      if (serviceSelect && allInfo) {
-        // Saving client Info
-        localStorage.setItem('inputName', inputName.value);
-        localStorage.setItem('inputLastName', inputLastName.value);
-        localStorage.setItem('inputEmail', inputEmail.value);
-        localStorage.setItem('inputTelephone', inputTelephone.value);
-
-        // Service Info
-        localStorage.setItem('inputCheckDentures', inputCheckDentures.value);
-        localStorage.setItem('inputCheckHygiene', inputCheckHygiene.value);
-        localStorage.setItem('inputCheckInvisalign', inputCheckInvisalign.value);
-        localStorage.setItem('inputCheckRoot', inputCheckRoot.value);
-        localStorage.setItem('inputCheckWhitening', inputCheckWhitening.value);
-        localStorage.setItem('inputCheckExtraction', inputCheckExtraction.value);
-      }
-    }
-  </script>
   <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script> -->
 </body>
 
