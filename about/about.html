@@ -7,13 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://kit.fontawesome.com/81b89d526b.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" /> -->
   <title>General Dentist</title>
 </head>
+
+
 <header>
   <!-- NAV BAR-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand link-white" href="/home/index.html"><Strong>GENERAL<br>DENTIST</Strong></a>
+    <a class="navbar-brand link-white" href="../index.html"><Strong>GENERAL<br>DENTIST</Strong></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -42,132 +47,76 @@
           <a class="nav-link" href="../contact/contact.html">Contact</a>
         </li>
       </ul>
-      <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-      <button class="btn btn-warning my-2 my-sm-0" type="button">Book Appointment</button>
+      <button class="btn btn-warning my-2 my-sm-0" type="button"
+        onclick="window.location.href = '../booking/booking.html'">Book Appointment</button>
     </div>
   </nav>
   <!--NAV BAR-->
 </header>
 
-<body>
-  <div class="container-fluid mt-5 mx-1">
-    <div class="row justify-content-center">
-      <!-- EMAIL FORM -->
-      <div class="col-6 bg-dark text-light py-3 px-4">
-        <h3 class="text-weight-bolder" style="font-family: Calibri;"><strong>Questions? Want to contact us for an
-            appointment?</strong></h3>
-        <h6>Fill out this form and we will contact you as soon as possible</h6>
-        <hr class="rounded" style="border-color:white;">
-        </hr>
-        <div class="row">
-          <div class="col"><label for="Name">Name</label></div>
-          <div class="col"><label for="Last Name">Last Name</label></div>
+<body class="d-flex flex-column min-vh-100">
+  <div class="row align-items-center">
+    <div class="col-1"></div>
+    <div class="col-10 container p-2 pl-3 mt-4 bg-dark text-white">
+      <h2>Since 1990</h2>
+      <p>Our Ottawa based clinic has been providing dental care each and every year to all
+        families in the area. We Offer a variety of services ranging from basic prevention cleaning to dentures
+        designing. Our team main priority is is ensure the best and most professional for its client, in a peacefull and
+        stress free environment. Call us, or book your appointment directly our webiste. It would be our pleasure to
+        brighten your smile!<i class="fa-solid fa-laugh-beam fa-xl"></i></p>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10 container mt-3 pt-3 pb-2 text-center bg-dark text-white">
+      <div class="row">
+        <div class="col"><i class="fa-solid fa-face-smile fa-2xl"></i><br>
+          <h6 class="mt-2"><strong><u>Marc Luke</u></strong></h6>
+          <p>General Dentist<br>Since 1990</p>        
         </div>
-        <div class="row">
-          <div class="col"><input type="text" class="form-control" id="inputName" aria-describedby="nameHelp"
-              placeholder="Enter Name"></div>
-          <div class="col"><input type="text" class="form-control" id="inputLastName" aria-describedby="lastNameHelp"
-              placeholder="Enter Last Name"></div>
+        <div class="col"><i class="fa-solid fa-face-smile fa-2xl"></i><br>
+          <h6 class="mt-2"><strong><u>John Kuban</u></strong></h6>
+          <p>General Dentist<br>Since 1990</p>
         </div>
-        <div class="row">
-          <div class="col"><label for="Email">Email</label></div>
-          <div class="col"><label for="Telephone Number">Telephone Number</label></div>
+        <div class="col"><i class="fa-solid fa-face-smile fa-2xl"></i><br>
+          <h6 class="mt-2"><strong><u>Marylin Aniston</u></strong></h6>
+          <p>General Dentist<br>Since 1990</p>
         </div>
-        <div class="row">
-          <div class="col"><input type="text" class="form-control" id="inputEmail" aria-describedby="emailHelp"
-              placeholder="Enter Email"></div>
-          <div class="col"><input type="text" class="form-control" id="inputTelephone" aria-describedby="telephoneHelp"
-              placeholder="Enter Telephone Number"></div>
+        <div class="col"><i class="fa-solid fa-face-smile fa-2xl"></i><br>
+          <h6 class="mt-2"><strong><u>Monic Cruz</u></strong></h6>
+          <p>Dental Hygienist<br>Since 1990</p>
         </div>
-        <div class="row">
-          <div class="col text-center mt-5">
-            <button type="button" data-toggle="modal" data-target="#exampleModalCenter"
-              class="btn btn-warning col-md-6 text-weight-bold">Send your message</button>
-          </div>
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title text-dark" id="exampleModalLongTitle">Your message was sent sucessfully</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>              
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
+        <div class="col"><i class="fa-solid fa-face-smile fa-2xl"></i><br>
+          <h6 class="mt-2"><strong><u>Nathan Tremblay</u></strong></h6>
+          <p>Dental Hygienist<br>Since 1990</p>
         </div>
-      </div>
-
-
-      <!-- CONTACT/OPENING -->
-      <div class="col-3 bg-dark text-center text-light ml-2 py-3">
-        <div class="row">
-          <div class="col">
-            <h3><strong>Contact Information</strong></h3>
-            <ul class="list-unstyled">
-              <li>75 Laurier Ave. E</li>
-              <li>Ottawa, On, Canada</li>
-              <li>K1N 6N5</li>
-              <li>819-123-4567</li>
-            </ul>
-          </div>
-        </div>
-        <hr class="rounded my-4" style="border-color: white;">
-        </hr>
-        <div class="row">
-          <div class="col">
-            <h3><strong>Opening Hours</strong></h3>
-            <ul class="list-unstyled list text-center">
-              <li>Monday-Friday: 8:00am to 8:00pm</li>
-              <li>Saturday: Closed</li>
-              <li>Sunday: Closed</li>
-            </ul>
-          </div>
+        <div class="col"><i class="fa-solid fa-face-smile fa-2xl"></i><br>
+          <h6 class="mt-2"><strong><u>Denise Bombardier</u></strong></h6>
+          <p>Dental Hygienist<br>Since 1990</p>
         </div>
       </div>
     </div>
+    <div class="col-1"></div>
   </div>
-  <div class="container bg-dark text-white my-5 align-items-center py-3 px-3">
-    <h5><strong>DIRECTIONS</strong></h5>
-    <div class="mapouter">
-      <div class="gmap_canvas"><iframe width="1100" height="340" id="gmap_canvas"
-          src="https://maps.google.com/maps?q=75%20Laurier%20Ave.%20E,%20Ottawa,%20ON%20K1N%206N5&t=&z=15&ie=UTF8&iwloc=&output=embed"
-          frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-          href="https://www.whatismyip-address.com"></a><br>
-        <style>
-          .mapouter {
-            position: relative;
-            text-align: right;
-            height: 340px;
-            width: 1100px;
-          }
-        </style><a href="https://www.embedgooglemap.net">how to put google map on website</a>
-        <style>
-          .gmap_canvas {
-            overflow: hidden;
-            background: none !important;
-            height: 340px;
-            width: 1100px;
-          }
-        </style>
-      </div>
+  <div class="row align-items-center pb-3">
+    <div class="col-1"></div>
+    <div class="col-10 container mt-4 py-2 pl-3 bg-dark text-white pb-4">
+      <h2>Our Services</h2>
+      <h6>Here are some services that we offer: </h6>       
+      <div class="row text-center align-items-center">
+        <div class="col"><a class="text-warning" style="font-weight: bolder; font-size:x-large;" href="../services/services_individual/hygiene.html">Hygiene & Prevention</a></div>
+        <div class="col"><a class="text-warning text-weight-bold" style="font-weight: bolder; font-size:x-large;" href="../services/services_individual/whitening.html">Teeth Whitening</a></div>
+        <div class="col"><a class="text-warning text-weight-bold" style="font-weight: bolder; font-size:x-large;" href="../services/services_individual/rootCanal.html">Root Canal Treatment</a></div>
+        <div class="col"><button class="btn btn-lg btn-primary" type="button" onclick="window.location.href = '../services/services.html'">See all services</button></div>
+      </div>   
     </div>
+    <div class="col-1"></div>
   </div>
-
 
 
   <!-- FOOTER -->
-  <footer class=" footer pt-4 bg-dark text-white">
+  <footer class="footer pt-3 bg-dark text-white mt-5">
     <!-- Container -->
     <div class="container text-justify text-md-left">
       <!--Grid row-->
@@ -201,6 +150,9 @@
             <li>
               <a style="text-decoration: none;">Teeth Whitening</a>
             </li>
+            <li>
+              <a style="text-decoration: none;">See all sevrices</a>
+            </li>
           </ul>
         </div>
         <!--Grid column-->
@@ -217,13 +169,11 @@
         <!--Grid column-->
         <div class="footer-text col-3 col-lg-3 col-xl-3 mx-auto mt-2">
           <h5 class="footer-h5 text-uppercase mb-2 font-weight-bold text-warning">CONTACT</h5>
-          <a>75 Laurier Ave. E</a>
+          <a><i class="fas fa-home mr-3"></i> Ottawa, ON, A9A 9A9, Canada</a>
           <br>
-          <a>Ottawa, ON, K1N 6N5, Canada</a>
+          <a><i class="fas fa-envelope mr-3"></i> dentist@dentist.ca</a>
           <br>
-          <a>dentist@dentist.ca</a>
-          <br>
-          <a>514-123-4567</a>
+          <a><i class="fas fa-print mr-3"></i> 514-123-4567</a>
         </div>
         <!--Grid column-->
       </div>
@@ -232,6 +182,8 @@
     <!-- Grid container -->
   </footer>
   <!-- Footer -->
+
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -241,6 +193,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
 </body>
 
 </html>
